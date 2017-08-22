@@ -8,6 +8,7 @@ import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import App from './App';
 import Login from './components/GoogleAuth/GoogleAuth';
+import Logout from './components/GoogleAuth/Logout';
 import Home from './views/Home/index';
 import Profile from './views/Profile/index';
 import './index.css';
@@ -25,6 +26,7 @@ ReactDOM.render(
        <Route exact path='/Home' component={Home}/>
        <Route exact path='/Profile' component={Profile}/>
        <Route path="/Login" component={Login} />
+       <Route path="/Logout" component={Logout} />
      </div>
     </BrowserRouter>
    </div>
