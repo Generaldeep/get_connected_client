@@ -1,40 +1,64 @@
 import React, { Component } from 'react';
-import { Card, Grid, Image } from 'semantic-ui-react';
+import firebase from 'firebase';
+// import GoogleAuthentication from './views/Login';
+import { BrowserRouter as Router, Route, Redirect, Link, Icon } from 'react-router-dom';
+import { Menu, Segment, Dropdown } from 'semantic-ui-react'
+import GetJobs from './components/Home/GetJobs'
+import { connect } from 'react-redux';
 import './App.css';
 
+
+
+
 class App extends Component {
-  state = { jobs: []};
-
-   renderJobs = jobs => jobs.map((job, i) => (
-      <Card.Group stackable key={i}>
-        <Card className="jobscard">
-          <Card.Content>
-            <Card.Header href={job.detailUrl} target="_blank">{job.jobTitle}</Card.Header>
-            <Card.Meta>{job.location}</Card.Meta>
-            <Card.Description>{job.company}</Card.Description>
-          </Card.Content>
-        </Card>
-      </Card.Group>
-    ));
-
-  componentDidMount() {
-    this.getJobs();
+  constructor(props) {
+    super(props);
+    this.state = { activeItem: 'home' }
   }
 
-  getJobs = () => {
-    fetch('https://secure-caverns-39632.herokuapp.com/api/jobs')
-      .then(res => res.json())
-      .then(jobs => this.setState({jobs}))
+  componentWillMount() {
+    const config = {
+      apiKey: "AIzaSyDBShnmL4sNL09g5ZjE84iX0gSD_xJ8JQA",
+      authDomain: "getconnected-1a33d.firebaseapp.com",
+      databaseURL: "https://getconnected-1a33d.firebaseio.com",
+      projectId: "getconnected-1a33d",
+      storageBucket: "getconnected-1a33d.appspot.com",
+      messagingSenderId: "483962483612"
+};
+firebase.initializeApp(config);
   }
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+
 
   render() {
-    const { jobs } = this.state;
+    // const { name, uid } = this.props.userData;
+    const { activeItem } = this.state;
     return (
-      <div>
-        <h2>Jobs</h2>
-        {this.renderJobs(jobs)}
+     <div>
+      <div id='header'>
+        <Menu pointing secondary color='blue' stackable={true}>
+            <Link to='/Home'>
+              <Menu.Item name='Home' to="/Home" active={activeItem === 'Home'} onClick={this.handleItemClick} />
+            </Link>
+            <Link to='/GetJobs'>
+              <Menu.Item name='GetJobs' to="/GetJobs" active={activeItem === 'GetJobs'} onClick={this.handleItemClick} />
+            </Link>
+
+
+            {/* <Menu.Menu position='right'>
+            {!this.props.userData.name && <Link to='/login'>
+              <Menu.Item name='login' active={activeItem === 'login'} onClick={this.handleItemClick}/>
+            </Link>}
+           { this.props.userData.name && <Link to='/Logout'>
+              <Menu.Item name='Logout' active={activeItem === 'Logout'} onClick={this.handleItemClick}/>
+            </Link>}
+           </Menu.Menu> */}
+
+        </Menu>
       </div>
-    );
+     </div>
+    )
   }
 }
 
