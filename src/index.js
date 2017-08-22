@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers';
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
+import Auth from './components/HOC/Require_Auth';
 import App from './App';
 import Login from './components/GoogleAuth/GoogleAuth';
 import Logout from './components/GoogleAuth/Logout';
@@ -22,11 +23,11 @@ ReactDOM.render(
    <div className='container'>
     <BrowserRouter>
      <div>
-      <Route  path='/' component={App} />
-       <Route exact path='/Home' component={Home}/>
-       <Route exact path='/Profile' component={Profile}/>
+      <Route  path='/' component={Auth(App)} />
+       <Route exact path='/Home' component={Auth(Home)}/>
+       <Route exact path='/Profile' component={Auth(Profile)}/>
        <Route path="/Login" component={Login} />
-       <Route path="/Logout" component={Logout} />
+       <Route path="/Logout" component={Auth(Logout)} />
      </div>
     </BrowserRouter>
    </div>

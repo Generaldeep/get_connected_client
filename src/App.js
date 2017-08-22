@@ -19,17 +19,17 @@ class App extends Component {
     this.state = { activeItem: 'home' }
   }
 
-  componentDidMount() {
-    const config = {
-      apiKey: "AIzaSyDBShnmL4sNL09g5ZjE84iX0gSD_xJ8JQA",
-      authDomain: "getconnected-1a33d.firebaseapp.com",
-      databaseURL: "https://getconnected-1a33d.firebaseio.com",
-      projectId: "getconnected-1a33d",
-      storageBucket: "getconnected-1a33d.appspot.com",
-      messagingSenderId: "483962483612"
-    };
-    firebase.initializeApp(config);
-  }
+  // componentDidMount() {
+  //   const config = {
+  //     apiKey: "AIzaSyDBShnmL4sNL09g5ZjE84iX0gSD_xJ8JQA",
+  //     authDomain: "getconnected-1a33d.firebaseapp.com",
+  //     databaseURL: "https://getconnected-1a33d.firebaseio.com",
+  //     projectId: "getconnected-1a33d",
+  //     storageBucket: "getconnected-1a33d.appspot.com",
+  //     messagingSenderId: "483962483612"
+  //   };
+  //   firebase.initializeApp(config);
+  // }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
