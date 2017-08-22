@@ -5,7 +5,10 @@ import GetJobs from '../../components/Home/GetJobs';
 class Home extends Component {
   render() {
     return(
-      <div><h3>Home Component</h3></div>
+      // <div><GetJobs/></div>
+      <div>
+        <h3>Home component</h3>
+      </div>
     )
   }
 }

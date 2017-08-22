@@ -23,6 +23,7 @@ ReactDOM.render(
       <Route  path='/' component={App} />
        <Route exact path='/Home' component={Home}/>
        <Route exact path='/Profile' component={Profile}/>
+       {/* <Route exact path='/Login' component={Login}/> */}
      </div>
     </BrowserRouter>
    </div>
