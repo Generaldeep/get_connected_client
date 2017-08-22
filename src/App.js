@@ -35,7 +35,7 @@ class App extends Component {
 
 
   render() {
-    // const { name, uid } = this.props.userData;
+    const { name, uid } = this.props.userData;
     const { activeItem } = this.state;
     return (
      <div>
@@ -50,12 +50,12 @@ class App extends Component {
 
 
             <Menu.Menu position='right'>
-            {<Link to='/Login'>
+            {!this.props.userData.name && <Link to='/Login'>
               <Menu.Item name='Login' active={activeItem === 'Login'} onClick={this.handleItemClick}/>
             </Link>}
-           {/* { this.props.userData.name && <Link to='/Logout'>
+           { this.props.userData.name && <Link to='/Logout'>
               <Menu.Item name='Logout' active={activeItem === 'Logout'} onClick={this.handleItemClick}/>
-            </Link>} */}
+            </Link>}
            </Menu.Menu>
 
         </Menu>
@@ -65,4 +65,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(({ userData, users }) => ({ userData, users }), null)(App);
