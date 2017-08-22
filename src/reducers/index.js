@@ -2,14 +2,14 @@ import { combineReducers } from 'redux';
 import jobs from './jobs_reducer';
 import userData from './userData_reducer';
 import authentication from './authentication_reducer';
-import fetchPosts from './fetchPosts_reducer';
+import posts from './fetchPosts_reducer';
 
 
 const appReducer = combineReducers({
   userData,
   jobs,
   authentication,
-  fetchPosts,
+  posts,
 
 })
 

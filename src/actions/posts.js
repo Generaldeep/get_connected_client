@@ -31,6 +31,7 @@ import firebase from 'firebase';
 };
 
  const restructurePostsAndComments = (PostsInFireBase) => {
+   console.log('>>>>>>>>>>>>>> getting here');
   const restructuredPosts = restructureFetchedFireBaseObjects(PostsInFireBase);
   restructuredPosts.forEach((post) => {
     if (post.comments) {
