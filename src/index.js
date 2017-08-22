@@ -23,7 +23,7 @@ ReactDOM.render(
    <div className='container'>
     <BrowserRouter>
      <div>
-      <Route  path='/' component={Auth(App)} />
+      <Route  path='/' component={App} />
        <Route exact path='/Home' component={Auth(Home)}/>
        <Route exact path='/Profile' component={Auth(Profile)}/>
        <Route path="/Login" component={Login} />
