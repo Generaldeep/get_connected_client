@@ -3,8 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
+    "firebase": "^4.3.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2",
+    "redux": "^3.7.2",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0",
     "semantic-ui-react": "^0.71.5"
   },
   "devDependencies": {
