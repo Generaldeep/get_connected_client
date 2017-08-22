@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
-import jobs from './jobs';
+import jobs from './jobs_reducer';
+import userData from './userData_reducer';
 
 const appReducer = combineReducers({
+  userData,
   jobs,
 })
 

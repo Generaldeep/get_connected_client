@@ -15,12 +15,6 @@ class GoogleAuthentication extends Component {
 
  componentDidMount = () => {
   firebase.auth()
-
-  //  if(user) {
-  //   this.props.authenticate(true)
-  //   this.redirect();
-  //  }
-  // })
  }
 
  redirect = () => {
