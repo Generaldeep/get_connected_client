@@ -1,0 +1,21 @@
+/*googleButton {
+  text-align: center;
+}*/
+#signIn {
+  text-align: center;
+  margin: 100px 400px;
+  background: url("../../assets/landingAssets/DeveloperConnect.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+/*img  {
+  height: 150px;
+  width: 150px;
+}*/
+#connectHeader {
+  float: right;
+  margin-top: 55px;
+  font-size: 48px;
+}

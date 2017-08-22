@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getJobs } from '../../action';
+import { getJobs } from '../../actions';
 import { Card, Grid, Image, Feed } from 'semantic-ui-react';
 // import './home.css';
 

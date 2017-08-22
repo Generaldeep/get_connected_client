@@ -7,6 +7,7 @@ import rootReducer from './reducers';
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import App from './App';
+import Login from './components/GoogleAuth/GoogleAuth';
 import Home from './views/Home/index';
 import Profile from './views/Profile/index';
 import './index.css';
@@ -23,7 +24,7 @@ ReactDOM.render(
       <Route  path='/' component={App} />
        <Route exact path='/Home' component={Home}/>
        <Route exact path='/Profile' component={Profile}/>
-       {/* <Route exact path='/Login' component={Login}/> */}
+       <Route path="/Login" component={Login} />
      </div>
     </BrowserRouter>
    </div>

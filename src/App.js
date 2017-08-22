@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 // import GoogleAuthentication from './views/Login';
 import { BrowserRouter as Router, Route, Redirect, Link, Icon } from 'react-router-dom';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Menu, Segment, Dropdown } from 'semantic-ui-react'
 import Home from './views/Home/index';
 import Profile from './views/Profile/index';
+import Login from './components/GoogleAuth/GoogleAuth';
 import { connect } from 'react-redux';
 import './App.css';
 
 
-
+injectTapEventPlugin();
 
 class App extends Component {
   constructor(props) {
@@ -47,14 +49,14 @@ class App extends Component {
             </Link>
 
 
-            {/* <Menu.Menu position='right'>
-            {!this.props.userData.name && <Link to='/login'>
-              <Menu.Item name='login' active={activeItem === 'login'} onClick={this.handleItemClick}/>
+            <Menu.Menu position='right'>
+            {<Link to='/Login'>
+              <Menu.Item name='Login' active={activeItem === 'Login'} onClick={this.handleItemClick}/>
             </Link>}
-           { this.props.userData.name && <Link to='/Logout'>
+           {/* { this.props.userData.name && <Link to='/Logout'>
               <Menu.Item name='Logout' active={activeItem === 'Logout'} onClick={this.handleItemClick}/>
-            </Link>}
-           </Menu.Menu> */}
+            </Link>} */}
+           </Menu.Menu>
 
         </Menu>
       </div>
