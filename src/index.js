@@ -7,7 +7,8 @@ import rootReducer from './reducers';
 import promiseMiddleware from 'redux-promise-middleware';
 import thunkMiddleware from 'redux-thunk';
 import App from './App';
-import GetJobs from './components/Home/GetJobs'
+import Home from './views/Home/index';
+import Profile from './views/Profile/index';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -19,8 +20,9 @@ ReactDOM.render(
    <div className='container'>
     <BrowserRouter>
      <div>
-      <Route exact path='/' component={App} />
-       <Route exact path='/jobs' component={GetJobs}/>
+      <Route  path='/' component={App} />
+       <Route exact path='/Home' component={Home}/>
+       <Route exact path='/Profile' component={Profile}/>
      </div>
     </BrowserRouter>
    </div>

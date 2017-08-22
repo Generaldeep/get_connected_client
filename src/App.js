@@ -3,7 +3,8 @@ import firebase from 'firebase';
 // import GoogleAuthentication from './views/Login';
 import { BrowserRouter as Router, Route, Redirect, Link, Icon } from 'react-router-dom';
 import { Menu, Segment, Dropdown } from 'semantic-ui-react'
-import GetJobs from './components/Home/GetJobs'
+import Home from './views/Home/index';
+import Profile from './views/Profile/index';
 import { connect } from 'react-redux';
 import './App.css';
 
@@ -16,7 +17,7 @@ class App extends Component {
     this.state = { activeItem: 'home' }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const config = {
       apiKey: "AIzaSyDBShnmL4sNL09g5ZjE84iX0gSD_xJ8JQA",
       authDomain: "getconnected-1a33d.firebaseapp.com",
@@ -24,8 +25,8 @@ class App extends Component {
       projectId: "getconnected-1a33d",
       storageBucket: "getconnected-1a33d.appspot.com",
       messagingSenderId: "483962483612"
-};
-firebase.initializeApp(config);
+    };
+    firebase.initializeApp(config);
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -41,8 +42,8 @@ firebase.initializeApp(config);
             <Link to='/Home'>
               <Menu.Item name='Home' to="/Home" active={activeItem === 'Home'} onClick={this.handleItemClick} />
             </Link>
-            <Link to='/GetJobs'>
-              <Menu.Item name='GetJobs' to="/GetJobs" active={activeItem === 'GetJobs'} onClick={this.handleItemClick} />
+            <Link to='/Profile'>
+              <Menu.Item name='Profile' to="/Profile" active={activeItem === 'Profile'} onClick={this.handleItemClick} />
             </Link>
 
 
