@@ -21,22 +21,23 @@ class PostForm extends Component {
         const { userData, addPost } = this.props;
         return (
             <Form id='postForm' >
-                <br></br>
+                <br/>
                 <label htmlFor="post">
                     <h2>
                      Welcome To Galvanize Connect
                     </h2>
                 </label>
-                <br></br>
+                <br/>
 
                 <input placeholder="Add Post"  name="post" onChange={this.updateInput} value={this.state.input} type="text"/>
-                <br></br>
-                <br></br>
+                
+                <div className='addPostButton'>
                 <Button color='blue' className="submit" type="submit"  onClick={(e) => {
                     e.preventDefault();
                     addPost(userData, this.state.input)
                     this.setState({input:''});
                 }} content='Add Post' labelPosition='left' icon='pencil' />
+              </div>
             </Form>
         )
     }

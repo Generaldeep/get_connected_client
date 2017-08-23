@@ -36,6 +36,18 @@
  margin-left: 24px;
 }
 
+.addPostButton {
+  float: right;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.modalButtons {
+  float: right;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
 .jobscard{
  height: 40%;
  border: 1px solid !important;

@@ -12,6 +12,9 @@ class Home extends Component {
         <div>
           <PostForm/>
         </div>
+        
+        <br/>
+        <br/>
 
         <div>
           <Feed/>

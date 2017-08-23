@@ -33,12 +33,18 @@ class Comments extends Component {
           <div>
             <Icon  type="submit" color='blue' link='true' onClick={this.handleOpen}>Reply</Icon>
             <Modal open={this.state.modalOpen}>
-              <Modal.Header>Add Reply</Modal.Header>
               <Modal.Content>
                  <Form className="links ui form">
                       <Modal.Content>
-                        <TextArea rows="2" value={this.state.input} className="editcomment"  onChange={this.updateComment} />
+                        <TextArea rows="2" value={this.state.input} className="editcomment" placeholder='add a reply'  onChange={this.updateComment} />
                      </Modal.Content>
+
+
+                     <div className='modalButtons'>
+                     <Button color="red" type="cancel" onClick={(e) =>{
+                       e.preventDefault();
+                       this.handleClose()
+                     }}>Cancel</Button>
 
                       <Button color='blue' className="submit" type="submit" onClick={(e) => {
                        e.preventDefault();
@@ -46,13 +52,8 @@ class Comments extends Component {
                        this.setState({input: ''})
                        this.handleClose()
                        }}>Submit</Button>
+                     </div>
 
-                    <div className="cancel">
-                      <Button color="red" type="cancel" onClick={(e) =>{
-                        e.preventDefault();
-                        this.handleClose()
-                      }}>Cancel</Button>
-                    </div>
                 </Form>
                </Modal.Content>
              </Modal>
