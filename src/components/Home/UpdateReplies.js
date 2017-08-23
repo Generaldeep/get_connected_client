@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteComment, editComment } from '../../actions';
 import { Card, Feed, Grid, Button, Modal, Header, Form, TextArea, Icon } from 'semantic-ui-react';
-// import './home.css'
+import './home.css';
 
 class UpdateComments extends Component {
   constructor(props) {

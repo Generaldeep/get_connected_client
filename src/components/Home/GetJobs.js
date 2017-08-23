@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getJobs } from '../../actions';
 import { Card, Grid, Image, Feed } from 'semantic-ui-react';
-// import './home.css';
+import './home.css';
 
 const renderJobs = jobs => jobs.map((job, i) => (
     <Card.Group stackable key={i}>

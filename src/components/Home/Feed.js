@@ -8,6 +8,7 @@ import ReplyForm from './ReplyForm';
 import UpdateReplies from './UpdateReplies';
 import UpdatePosts from './UpdatePosts';
 import firebase from 'firebase';
+import './home.css';
 
 
 class Feeds extends Component {
@@ -68,9 +69,10 @@ class Feeds extends Component {
                           <Comment.Actions>
                             <Comment.Action><UpdatePosts post={post} user={userData}/></Comment.Action>
                           </Comment.Actions>
+                          <Comment.Action><ReplyForm postKey={post.postKey} postIndex={ind}/></Comment.Action>
                         </Comment.Content>
                     {this.renderComments(post.comments, userData)}
-                    <ReplyForm postKey={post.postKey} postIndex={ind}/>
+                    {/* <ReplyForm postKey={post.postKey} postIndex={ind}/> */}
                    </Comment>
                     </Comment.Group>
                 </div>

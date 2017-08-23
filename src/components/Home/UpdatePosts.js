@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deletePost, editPost } from '../../actions';
 import { Card, Feed, Grid, Button, Modal, Header, Form, TextArea, Input, Icon } from 'semantic-ui-react';
-// import './home.css';
+import './home.css';
 
 
 class UpdatePosts extends Component {
@@ -71,14 +71,6 @@ class UpdatePosts extends Component {
     }
     return (
      <div></div>
-      // <div id='votes'>
-      //   <div className='votedown'>
-      //     <Icon color="red" size='large' name='arrow circle down'></Icon>
-      //   </div>
-      //   <div className='voteup'>
-      //     <Icon color="green" size='large' name='arrow circle up'></Icon>
-      //   </div>
-      // </div>
     );
   }
 }

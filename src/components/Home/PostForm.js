@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { addPost } from '../../actions';
 import { connect } from 'react-redux';
 import { Button, Form, TextArea } from 'semantic-ui-react';
+import './home.css';
 
 
 class PostForm extends Component {
@@ -35,7 +36,7 @@ class PostForm extends Component {
                     e.preventDefault();
                     addPost(userData, this.state.input)
                     this.state.input = '';
-                }}>Submit</Button>
+                }} content='Add Post' labelPosition='left' icon='pencil' />
             </Form>
         )
     }

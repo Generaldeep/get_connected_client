@@ -1,0 +1,44 @@
+#votes {
+ float: right;
+}
+
+.delete{
+ width: 80px;
+ float: right;
+}
+.edit{
+ width: 80px;
+ float: right;
+}
+
+.update {
+ float: right;
+}
+
+.cancel {
+ float: right;
+}
+
+/*.submit {
+ width: 80px;
+ vertical-align: center;
+}*/
+
+.voteup {
+ float: right;
+}
+
+.votedown {
+ float: right;
+}
+
+.getjobs {
+ margin-left: 24px;
+}
+
+.jobscard{
+ height: 40%;
+ border: 1px solid !important;
+ border-radius: 10px !important;
+ background-color: #d1e1f9 !important;
+}

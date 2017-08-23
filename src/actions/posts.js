@@ -31,7 +31,6 @@ import firebase from 'firebase';
 };
 
  const restructurePostsAndComments = (PostsInFireBase) => {
-   console.log('>>>>>>>>>>>>>> getting here');
   const restructuredPosts = restructureFetchedFireBaseObjects(PostsInFireBase);
   restructuredPosts.forEach((post) => {
     if (post.comments) {
@@ -53,7 +52,7 @@ import firebase from 'firebase';
     post: input,
     name: userData.name,
     photo: userData.photo,
-    date: (new Date()).toString(),
+    date: new Date().toString(),
     postKey: posts.postKey,
   };
   firebase.database().ref(`feed/posts/${posts.postKey}`).update(postInfo);
