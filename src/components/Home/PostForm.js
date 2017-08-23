@@ -35,7 +35,7 @@ class PostForm extends Component {
                 <Button color='blue' className="submit" type="submit"  onClick={(e) => {
                     e.preventDefault();
                     addPost(userData, this.state.input)
-                    this.state.input = '';
+                    this.setState({input:''});
                 }} content='Add Post' labelPosition='left' icon='pencil' />
             </Form>
         )
