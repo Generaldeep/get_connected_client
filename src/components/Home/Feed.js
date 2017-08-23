@@ -78,7 +78,7 @@ class Feeds extends Component {
         })
         return (
             <div>
-                <PostsForm /> {Posts}
+                {Posts}
             </div>
         )
     }
