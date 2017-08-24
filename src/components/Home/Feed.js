@@ -33,11 +33,11 @@ class Feeds extends Component {
                           <Comment.Content>
                             <Comment.Author>
                               {comment.name}
+                              <Comment.Metadata>
+                               {comment.time}
+                              </Comment.Metadata>
                             </Comment.Author>
                             <Comment.Text>{comment.comment}</Comment.Text>
-                            <Comment.Metadata>
-                             {comment.time}
-                            </Comment.Metadata>
                             <Comment.Actions>
                               <Comment.Action><UpdateReplies comment={comment} user={userData}/></Comment.Action>
                             </Comment.Actions>
