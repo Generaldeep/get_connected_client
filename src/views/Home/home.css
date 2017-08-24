@@ -1,0 +1,46 @@
+#home {
+ max-width: 90%;
+}
+
+#jobs {
+ width: 20%;
+ float: right;
+ text-align: center;
+ padding-top: 2em;
+ padding-left: 40px;
+ border-left: 1px solid grey;
+ margin: 40px;
+ margin-left: 10px;
+ margin-right: 10px;
+}
+
+#jobs h2 {
+  border-bottom: 1px solid grey;
+}
+
+
+
+#articles {
+ width: 20%;
+ float: right;
+ text-align: center;
+ position: relative;
+ padding-top: 2em;
+ margin: 40px;
+ margin-left: 10px;
+ border-right: 1px solid grey;
+ padding-right: 30px;
+}
+
+#articles h3 {
+  border-bottom: 1px solid grey;
+}
+
+#feed{
+ width: 40%;
+ float: right;
+ margin-top: 40px;
+ margin-left: 60px;
+ margin-right: 60px;
+ padding-left: 40px;
+}

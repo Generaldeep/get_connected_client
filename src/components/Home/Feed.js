@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 import {Card, Feed, Grid, Button, Modal, Header, Comment} from 'semantic-ui-react';
 import {deletePost, editComment, editPost, fetchPosts} from '../../actions';
-import PostsForm from './PostForm';
+import PostForm from './PostForm';
 import ReplyForm from './ReplyForm';
 import UpdateReplies from './UpdateReplies';
 import UpdatePosts from './UpdatePosts';
@@ -84,6 +84,7 @@ class Feeds extends Component {
         })
         return (
             <div>
+              <PostForm/>
                 {Posts}
             </div>
         )

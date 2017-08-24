@@ -3,6 +3,7 @@ import jobs from './jobs_reducer';
 import userData from './userData_reducer';
 import authentication from './authentication_reducer';
 import posts from './fetchPosts_reducer';
+import articles from './article_reducer';
 
 
 const appReducer = combineReducers({
@@ -10,6 +11,7 @@ const appReducer = combineReducers({
   jobs,
   authentication,
   posts,
+  articles,
 
 })
 
