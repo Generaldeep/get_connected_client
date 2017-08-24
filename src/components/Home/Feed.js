@@ -38,9 +38,11 @@ class Feeds extends Component {
                               </Comment.Metadata>
                             </Comment.Author>
                             <Comment.Text>{comment.comment}</Comment.Text>
+                            <div className='updatePostIcons'>
                             <Comment.Actions>
                               <Comment.Action><UpdateReplies comment={comment} user={userData}/></Comment.Action>
                             </Comment.Actions>
+                          </div>
                           </Comment.Content>
                       </Comment>
                       </Comment.Group>
