@@ -56,7 +56,7 @@ class Feeds extends Component {
         const { userData } = this.props;
         const Posts = this.props.posts.map((post, ind) => {
             return (
-                <div key={ind}>
+                <div key={ind} className='origPost'>
                     <Comment.Group>
                      <Comment>
                         <Comment.Avatar src={post.photo} />
