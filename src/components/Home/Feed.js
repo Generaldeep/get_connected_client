@@ -78,6 +78,7 @@ class Feeds extends Component {
                     {this.renderComments(post.comments, userData)}
                    </Comment>
                     </Comment.Group>
+                    <br/>
                 </div>
             )
         })
