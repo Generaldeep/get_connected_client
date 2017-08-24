@@ -1,0 +1,25 @@
+.proDesc {
+
+    width: 85%;
+    height: 250px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: black;
+    resize: none;
+    margin-bottom: 200px;
+    float: right;
+    position:relative;
+}
+.form{
+  margin-bottom: 200px;
+}
+.theForm {
+  float: right;
+  width: 85%;
+  position: relative;
+  padding-right: 50px;
+
+
+}

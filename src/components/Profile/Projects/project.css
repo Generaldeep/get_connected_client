@@ -1,0 +1,45 @@
+
+.projectItem {
+  background-color: #F5F5F5;
+  margin: 10px;
+  width: 80%;
+  position: center;
+  align-self: center;
+  padding: 20px;
+  border: 1px solid;
+  border-color: #DCDCDC;
+  border-radius: 6px;
+}
+
+.projectTitle{
+  margin: auto;
+  position: relative;
+}
+.allProjects{
+  position: relative;
+  margin: auto;
+  align-content: center;
+  padding-left: 55px;
+}
+
+.projectDes{
+ text-align: left;
+ text-decoration-color: black;
+}
+
+.updateproject {
+ float: right;
+}
+
+.editproject {
+ float: right;
+}
+
+
+.delete {
+ float: right;
+}
+
+.edit {
+ float left: 
+}

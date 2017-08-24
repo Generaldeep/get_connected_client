@@ -4,6 +4,9 @@ import userData from './userData_reducer';
 import authentication from './authentication_reducer';
 import posts from './fetchPosts_reducer';
 import articles from './article_reducer';
+import projects from './projects_reducer';
+import social from './social_reducer';
+import skills from './skills_reducer';
 
 
 const appReducer = combineReducers({
@@ -12,6 +15,9 @@ const appReducer = combineReducers({
   authentication,
   posts,
   articles,
+  projects,
+  social,
+  skills,
 
 })
 

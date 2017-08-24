@@ -4,4 +4,8 @@ export default {
   posts: [],
   replies: [],
   articles: [],
+  projects: [],
+  skills: [],
+  social: [],
+
 }

@@ -1,0 +1,65 @@
+ #profile {
+  max-width: 95%;
+ }
+
+ #profileheader {
+  max-width: 30%;
+  min-width: 30%;
+  margin-top: 95px;
+  margin-left: 60px;
+  margin-right: 100px;
+  padding: 1px;
+ }
+
+ /*#skills_projects_coverflow {
+  max-width: 60%;
+  min-width: 30%;
+  float: right;
+  margin-top: 80px;
+ }*/
+
+.projectsskills {
+ margin-top: 40px !important;
+
+}
+ .skills {
+  margin-bottom: 30px;
+ }
+
+ .skillslist {
+  margin-bottom: 20px;
+ }
+
+ .projectlist {
+  margin-top: 20px;
+ }
+
+ .addskills {
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 20px;
+ }
+ .projects {
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 20px;
+ }
+
+.updatecohort{
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:14px;
+}
+
+.updatesocial{
+ margin-top:20px;
+ margin-bottom:20px;
+ margin-left: 8px;
+ display: inline-block;
+}
+
+.deletesocial{
+ margin-top:20px;
+ margin-bottom:20px;
+ margin-left: 15px;
+}

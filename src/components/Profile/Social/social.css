@@ -1,0 +1,21 @@
+#submitlink {
+ float: right;
+}
+
+#cancellink {
+ float: right;
+}
+
+.github {
+ display:inline-block;
+}
+.linkedin {
+ display:inline-block;
+}
+.twitter {
+ display:inline-block;
+}
+
+.social {
+  display:inline-block;
+}
