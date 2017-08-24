@@ -61,18 +61,19 @@ class Feeds extends Component {
                         <Comment.Content>
                           <Comment.Author>
                             {post.name}
+                            <Comment.Metadata>
+                             {post.date}
+                            </Comment.Metadata>
                           </Comment.Author>
                           <Comment.Text>{post.post}</Comment.Text>
-                          <Comment.Metadata>
-                           {post.date}
-                          </Comment.Metadata>
                           <Comment.Actions>
+                            <div className='updatePostIcons'>
                             <Comment.Action><UpdatePosts post={post} user={userData}/></Comment.Action>
+                          </div>
                           </Comment.Actions>
                           <Comment.Action><ReplyForm postKey={post.postKey} postIndex={ind}/></Comment.Action>
                         </Comment.Content>
                     {this.renderComments(post.comments, userData)}
-                    {/* <ReplyForm postKey={post.postKey} postIndex={ind}/> */}
                    </Comment>
                     </Comment.Group>
                 </div>
