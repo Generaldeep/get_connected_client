@@ -36,23 +36,22 @@ class Comments extends Component {
               <Modal.Content>
                  <Form className="links ui form">
                       <Modal.Content>
-                        <TextArea rows="2" value={this.state.input} className="editcomment" placeholder='add a reply'  onChange={this.updateComment} />
+                        <input placeholder="Add Post"  name="post" onChange={this.updateComment} value={this.state.input} type="text"/>
+                        <br/>
+                        <br/>
+
+                        <Button color='blue' className="submit" type="submit" onClick={(e) => {
+                         e.preventDefault();
+                         addComment(userData, this.state.input, postKey, postIndex)
+                         this.setState({input: ''})
+                         this.handleClose()
+                         }}>Submit</Button>
+
+                         <Button color="red" type="cancel" onClick={(e) =>{
+                           e.preventDefault();
+                           this.handleClose()
+                         }}>Cancel</Button>
                      </Modal.Content>
-
-
-                     <div className='modalButtons'>
-                     <Button color="red" type="cancel" onClick={(e) =>{
-                       e.preventDefault();
-                       this.handleClose()
-                     }}>Cancel</Button>
-
-                      <Button color='blue' className="submit" type="submit" onClick={(e) => {
-                       e.preventDefault();
-                       addComment(userData, this.state.input, postKey, postIndex)
-                       this.setState({input: ''})
-                       this.handleClose()
-                       }}>Submit</Button>
-                     </div>
 
                 </Form>
                </Modal.Content>
