@@ -4,7 +4,7 @@ import { login, authenticate, checkForAuthenticatedUser } from '../../actions/au
 import { Redirect } from 'react-router-dom';
 import { Button, Sidebar, Segment } from 'semantic-ui-react';
 import googleB from '../../assets/google-logo.png';
-// import LearnMore from '../../components/Learn/LearnMore';
+import LearnMore from './LearnMore';
 import firebase from 'firebase';
 import './GoogleAuth.css';
 
@@ -27,6 +27,7 @@ class GoogleAuthentication extends Component {
     }
     return (
             <div id='login'>
+            <LearnMore/>
             <h2 className='signinheader'>Sign In with Google</h2>
             <Button id='loginbutton' onClick={this.props.login} size="massive"circular icon>
               <img style={{ width: '50px', height: '50px' }} src={googleB} alt="" />

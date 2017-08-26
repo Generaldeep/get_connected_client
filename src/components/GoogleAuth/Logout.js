@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import firebase from 'firebase';
 import { logout } from '../../actions';
 
+
 class Logout extends Component {
   constructor(props) {
     super(props);

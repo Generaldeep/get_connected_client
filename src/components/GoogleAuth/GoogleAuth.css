@@ -10,12 +10,56 @@
   background-size: cover;
 
 }
-/*img  {
+.login img  {
   height: 150px;
   width: 150px;
-}*/
+}
 #connectHeader {
   float: right;
   margin-top: 55px;
   font-size: 48px;
+}
+
+#loginbutton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+   }
+
+.signinheader {
+ text-align: center;
+}
+
+
+.aboutPage{
+  background: url('../../assets/landingAssets/DeveloperConnect.jpeg') center center no-repeat;
+  /*background-position: center !important;*/
+  background-repeat: no-repeat ;
+  background-size: cover !important;
+  padding-top: 20px;
+  position: center;
+  /*background-size: cover;*/
+  text-align: center;
+  padding: 100px;
+  margin: 0 auto;
+  /*text: white;*/
+  /*padding-bottom: 0px !important; */
+ /*margin-top: 0 !important;*/
+}
+
+.description {
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  text: white;
+}
+.aboutPage p{
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.aboutPage h1{
+  color: white;
+  text-align: center;
 }

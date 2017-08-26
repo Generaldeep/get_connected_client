@@ -36,7 +36,7 @@ class Comments extends Component {
               <Modal.Content>
                  <Form className="links ui form">
                       <Modal.Content>
-                        <input placeholder="Add Post"  name="post" onChange={this.updateComment} value={this.state.input} type="text"/>
+                        <input placeholder="Add Reply"  name="post" onChange={this.updateComment} value={this.state.input} type="text"/>
                         <br/>
                         <br/>
 
