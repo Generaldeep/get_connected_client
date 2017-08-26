@@ -34,12 +34,12 @@ class AddProjectForm extends Component {
               <Form className="theForm ui form">
                 <Modal.Content>
                   <Header>Project Name </Header>
-                    <TextArea className="proName" placeholder="Enter project name" name="projectName" onChange={this.updateInput} type="text" autoHeight/>
+                    <input className="proName" placeholder="Enter project name" name="projectName" onChange={this.updateInput} type="text" autoHeight/>
                       <Header>Project Description</Header>
-                    <TextArea className="proDesc" name="description" placeholder="Enter brief description about your project" onChange={this.updateInput} type="text" autoHeight/>
-                </Modal.Content>
+                    <input className="proDesc" name="description" placeholder="Enter brief description about your project" onChange={this.updateInput} type="text" autoHeight/>
+                    <br/>
+                    <br/>
 
-                  <div className='submit'>
                     <Button
                       className="ui button" type="submit" color='blue'
                       onClick={(e) => {
@@ -53,16 +53,15 @@ class AddProjectForm extends Component {
                       }} >
                       Submit
                     </Button>
-                  </div>
 
-                  <div className='cancel'>
                     <Button className='ui button' type="cancel" color='red' onClick={(e) =>{
                       e.preventDefault();
                       this.handleClose();
                       }}>
                       Cancel
                     </Button>
-                  </div>
+                </Modal.Content>
+
               </Form>
           </Modal.Content>
       </Modal>

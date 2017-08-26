@@ -74,24 +74,6 @@ class EditProject extends Component {
                       </Button>
 
                   </Modal.Content>
-                    {/* <Button
-                      className="ui button" color='blue' type="submit"
-                      onClick={(e) => {
-                      e.preventDefault();
-                      editProject(project, user, {
-                      projectName: this.state.projectName,
-                      description: this.state.description,
-                     });
-                      this.handleClose();
-                      }} >
-                      Submit
-                    </Button>
-                    <Button className='ui button' color='red' type="cancel" onClick={(e) =>{
-                      e.preventDefault();
-                      this.handleClose();
-                      }}>
-                      Cancel
-                    </Button> */}
                 </Form>
             </Modal.Content>
           </Modal>
