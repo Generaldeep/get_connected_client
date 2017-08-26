@@ -46,25 +46,23 @@ class UpdatePosts extends Component {
             <Modal.Content>
                <Form className="links ui form">
                     <Modal.Content>
-                     <TextArea rows="2" value={this.state.input} className="editpost" onChange={this.updateInput}/>
-                   </Modal.Content>
+                     <input rows="2" value={this.state.input} className="editpost" onChange={this.updateInput}/>
+                     <br/>
+                     <br/>
 
+                    <Button
+                      color="blue" type="submit" onClick={(e) => {
+                        e.preventDefault();
+                        editPost(post, user, this.state.input);
+                        this.handleClose();
+                      }}
+                    >Update</Button>
 
-                  <div className="modalButtons">
                     <Button className='ui button' color="red" type="cancel" onClick={(e) =>{
                       e.preventDefault();
                       this.handleClose()
                     }} >Cancel</Button>
-
-                   <Button
-                     color="blue" type="submit" onClick={(e) => {
-                       e.preventDefault();
-                       editPost(post, user, this.state.input);
-                       this.handleClose();
-                     }}
-                   >Update</Button>
-                 </div>
-
+                   </Modal.Content>
 
               </Form>
              </Modal.Content>

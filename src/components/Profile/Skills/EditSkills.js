@@ -48,6 +48,9 @@ class EditSkills extends Component {
                   <Modal.Content>
                     <Header>Edit Skill </Header>
                       <input className="skill" name="skill" value={this.state.skill} onChange={this.updateInput} type="text" autoHeight/>
+                      <br/>
+                      <br/>
+
                       <Button
                         className="ui button" color='blue' type="submit"
                         onClick={(e) => {
@@ -57,6 +60,7 @@ class EditSkills extends Component {
                         }} >
                         Submit
                       </Button>
+
                       <Button className='ui button' color='red' type="cancel" onClick={(e) =>{
                         e.preventDefault();
                         this.handleClose();
@@ -64,21 +68,6 @@ class EditSkills extends Component {
                         Cancel
                       </Button>
                   </Modal.Content>
-                    {/* <Button
-                      className="ui button" color='blue' type="submit"
-                      onClick={(e) => {
-                      e.preventDefault();
-                      editSkills(user, skills, this.state.skill);
-                      this.handleClose();
-                      }} >
-                      Submit
-                    </Button>
-                    <Button className='ui button' color='red' type="cancel" onClick={(e) =>{
-                      e.preventDefault();
-                      this.handleClose();
-                      }}>
-                      Cancel
-                    </Button> */}
                 </Form>
             </Modal.Content>
           </Modal>

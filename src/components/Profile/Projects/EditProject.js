@@ -51,6 +51,8 @@ class EditProject extends Component {
                       <input className="proName" value={this.state.projectName} name="projectName" onChange={this.updateInput} type="text" autoHeight/>
                         <Header>Project Description</Header>
                       <input className="proDesc" value={this.state.description} name="description" onChange={this.updateInput} type="text" autoHeight/>
+                      <br/>
+                      <br/>
 
                       <Button
                         className="ui button" color='blue' type="submit"
