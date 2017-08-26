@@ -46,7 +46,9 @@ class UpdateComments extends Component {
             <Modal.Content>
                <Form className="links ui form">
                     <Modal.Content>
-                      <input  value={this.state.input} className="editcomment"  onChange={this.updateInput} />
+                      <input placeholder='edit your post' value={this.state.input} className="editcomment"  onChange={this.updateInput} />
+                      <br/>
+                      <br/>
 
                       <Button
                         color="blue" type="onSubmit" onClick={(e) => {

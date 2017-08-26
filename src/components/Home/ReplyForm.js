@@ -40,7 +40,7 @@ class Comments extends Component {
                         <br/>
                         <br/>
 
-                        <Button color='blue' className="submit" type="submit" onClick={(e) => {
+                        <Button color='blue' type="submit" onClick={(e) => {
                          e.preventDefault();
                          addComment(userData, this.state.input, postKey, postIndex)
                          this.setState({input: ''})
@@ -52,7 +52,6 @@ class Comments extends Component {
                            this.handleClose()
                          }}>Cancel</Button>
                      </Modal.Content>
-
                 </Form>
                </Modal.Content>
              </Modal>
