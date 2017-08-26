@@ -46,15 +46,29 @@ class UpdateComments extends Component {
             <Modal.Content>
                <Form className="links ui form">
                     <Modal.Content>
-                      <TextArea rows="2" value={this.state.input} className="editcomment"  onChange={this.updateInput} />
+                      <input  value={this.state.input} className="editcomment"  onChange={this.updateInput} />
+
+                      <Button
+                        color="blue" type="onSubmit" onClick={(e) => {
+                          e.preventDefault();
+                          editComment(comment, user, this.state.input);
+                          this.handleClose();
+                        }}
+                      >Update</Button>
+
+                      <Button color="red" type="cancel" onClick={(e) =>{
+                        e.preventDefault();
+                        this.handleClose()
+                      }} >Cancel</Button>
+
                    </Modal.Content>
 
-                  <div className="modalButtons">
+                  {/* <div className="modalButtons">
                     <Button color="red" type="cancel" onClick={(e) =>{
                       e.preventDefault();
                       this.handleClose()
                     }} >Cancel</Button>
-                    
+
                    <Button
                      color="blue" type="onSubmit" onClick={(e) => {
                        e.preventDefault();
@@ -62,7 +76,7 @@ class UpdateComments extends Component {
                        this.handleClose();
                      }}
                    >Update</Button>
-                  </div>
+                  </div> */}
               </Form>
              </Modal.Content>
            </Modal>
