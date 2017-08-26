@@ -47,9 +47,24 @@ class EditSkills extends Component {
                 <Form className="theForm ui form">
                   <Modal.Content>
                     <Header>Edit Skill </Header>
-                      <TextArea className="skill" name="skill" value={this.state.skill} onChange={this.updateInput} type="text" autoHeight/>
+                      <input className="skill" name="skill" value={this.state.skill} onChange={this.updateInput} type="text" autoHeight/>
+                      <Button
+                        className="ui button" color='blue' type="submit"
+                        onClick={(e) => {
+                        e.preventDefault();
+                        editSkills(user, skills, this.state.skill);
+                        this.handleClose();
+                        }} >
+                        Submit
+                      </Button>
+                      <Button className='ui button' color='red' type="cancel" onClick={(e) =>{
+                        e.preventDefault();
+                        this.handleClose();
+                        }}>
+                        Cancel
+                      </Button>
                   </Modal.Content>
-                    <Button
+                    {/* <Button
                       className="ui button" color='blue' type="submit"
                       onClick={(e) => {
                       e.preventDefault();
@@ -63,7 +78,7 @@ class EditSkills extends Component {
                       this.handleClose();
                       }}>
                       Cancel
-                    </Button>
+                    </Button> */}
                 </Form>
             </Modal.Content>
           </Modal>

@@ -48,11 +48,31 @@ class EditProject extends Component {
                 <Form className="theForm ui form">
                   <Modal.Content>
                     <Header>Project Name </Header>
-                      <TextArea className="proName" value={this.state.projectName} name="projectName" onChange={this.updateInput} type="text" autoHeight/>
+                      <input className="proName" value={this.state.projectName} name="projectName" onChange={this.updateInput} type="text" autoHeight/>
                         <Header>Project Description</Header>
-                      <TextArea className="proDesc" value={this.state.description} name="description" onChange={this.updateInput} type="text" autoHeight/>
+                      <input className="proDesc" value={this.state.description} name="description" onChange={this.updateInput} type="text" autoHeight/>
+
+                      <Button
+                        className="ui button" color='blue' type="submit"
+                        onClick={(e) => {
+                        e.preventDefault();
+                        editProject(project, user, {
+                        projectName: this.state.projectName,
+                        description: this.state.description,
+                       });
+                        this.handleClose();
+                        }} >
+                        Submit
+                      </Button>
+                      <Button className='ui button' color='red' type="cancel" onClick={(e) =>{
+                        e.preventDefault();
+                        this.handleClose();
+                        }}>
+                        Cancel
+                      </Button>
+
                   </Modal.Content>
-                    <Button
+                    {/* <Button
                       className="ui button" color='blue' type="submit"
                       onClick={(e) => {
                       e.preventDefault();
@@ -69,7 +89,7 @@ class EditProject extends Component {
                       this.handleClose();
                       }}>
                       Cancel
-                    </Button>
+                    </Button> */}
                 </Form>
             </Modal.Content>
           </Modal>
