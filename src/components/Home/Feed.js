@@ -54,7 +54,7 @@ class Feeds extends Component {
 
     render() {
         const { userData } = this.props;
-        const Posts = this.props.posts.map((post, ind) => {
+        const posts = this.props.posts.map((post, ind) => {
             return (
                 <div key={ind} className='origPost'>
                     <Comment.Group>
@@ -85,7 +85,7 @@ class Feeds extends Component {
         return (
             <div>
               <PostForm/>
-                {Posts}
+                {posts}
             </div>
         )
     }

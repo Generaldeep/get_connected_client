@@ -11,15 +11,15 @@ class Home extends Component {
     return(
       <div id="home">
             <div id="jobs">
-              <h2>Bay Area Jobs</h2><br /> <br />
+              <h4>Bay Area Jobs</h4><br /> <br />
               <GetJobs />
             </div>
-            
+
             <div id="feed">
                 <Feed />
             </div>
             <div id="articles">
-              <h3>Latest Tech News</h3>
+              <h4>Latest Tech News</h4>
               <Articles />
             </div>
           </div>
