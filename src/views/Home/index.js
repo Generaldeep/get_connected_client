@@ -10,22 +10,19 @@ import './home.css'
 class Home extends Component {
   render() {
     return(
-      <Grid stackable id="home">
-            <div id="jobs">
-              <h4>Bay Area Jobs</h4><br /> <br />
-              <GetJobs />
-            </div>
-
-            <div id="feed">
-                <Feed />
-            </div>
-
-            <div id="articles">
-              <h4>Latest Tech News</h4>
-              <Articles />
-            </div>
-
-          </Grid>
+      <Grid id="home"  columns={1} >
+        <Grid.Row columns={3}>
+          <Grid.Column>
+            <GetJobs />
+          </Grid.Column>
+          <Grid.Column>
+            <Feed />
+          </Grid.Column>
+          <Grid.Column>
+            <Articles />
+          </Grid.Column>
+        </Grid.Row>
+        </Grid>
     )
   }
 }
