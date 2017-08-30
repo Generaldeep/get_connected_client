@@ -17,7 +17,7 @@ import './profile.css';
 class Profile extends Component {
   render() {
     return (
-      <Grid id="profile" stackable>
+      <Grid id="profile" rows={2}>
         <Grid.Row columns={2}>
           <Grid.Column>
             <ProfileHeader />
@@ -41,7 +41,9 @@ class Profile extends Component {
             </div>
 
           </Grid.Column>
+          </Grid.Row>
 
+          <Grid.Row>
           <Grid.Column>
             <div className="projectsskills">
               <div className="skills">
