@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Header } from 'semantic-ui-react';
 import ProfileHeader from '../../components/Profile/Header/Header';
 import ProjectsList from '../../components/Profile/Projects/ProjectsList';
 import SkillsList from '../../components/Profile/Skills/SkillsList';
@@ -28,7 +28,7 @@ class Profile extends Component {
               </div> */}
               <div className="updatesocial">
                 <div>
-                  <h2>Social Media Links</h2>
+                  <Header size='medium' textAlign='center'>Social Media Links</Header>
                   <AddSocial />
                   <ListOfSocialLinks />
                 </div>
@@ -46,7 +46,7 @@ class Profile extends Component {
             <div className="projectsskills">
               <div className="skills">
                 <div className="skillslist">
-                  <h4>Technical Skills</h4>
+                  <Header size='medium' textAlign='center'>Technical Skills</Header>
                   <SkillsList />
                   <div className="addskills">
                     <AddSkillsForm />
@@ -56,7 +56,7 @@ class Profile extends Component {
 
 
               <div className="projects">
-                <h2>Technical Projects</h2>
+                <Header size='medium' textAlign='center'>Technical Projects</Header>
                 <div>
                   <ProjectsList />
                   <div className="projectlist">
