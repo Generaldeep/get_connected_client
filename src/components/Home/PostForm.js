@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { addPost } from '../../actions';
 import { connect } from 'react-redux';
-import { Button, Form, TextArea } from 'semantic-ui-react';
+import { Button, Form, TextArea, Header } from 'semantic-ui-react';
 import './home.css';
 
 
@@ -21,16 +21,11 @@ class PostForm extends Component {
         const { userData, addPost } = this.props;
         return (
             <Form id='postForm' >
-                <br/>
-                <label htmlFor="post">
-                    <h2>
-                     Welcome To Galvanize Connect
-                    </h2>
-                </label>
+                <Header>Welcome To Get Connected</Header>
                 <br/>
 
                 <input placeholder="Add Post"  name="post" onChange={this.updateInput} value={this.state.input} type="text"/>
-                
+
                 <div className='addPostButton'>
                 <Button color='blue' className="submit" type="submit"  onClick={(e) => {
                     e.preventDefault();
