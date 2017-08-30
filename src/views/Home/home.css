@@ -1,4 +1,10 @@
+#home{
+  width: 100%
+}
 
+.feedandjobs{
+  width: 70%
+}
 
 #jobs {
  width: 20%;
@@ -18,7 +24,10 @@
 
 
 
-#articles {
+.articles {
+ width: 30%;
+}
+/*#articles {
  width: 20%;
  float: right;
  text-align: center;
@@ -28,7 +37,7 @@
  margin-left: 10px;
  border-right: 1px solid grey;
  padding-right: 30px;
-}
+}*/
 
 #articles h4 {
   border-bottom: 1px solid grey;
