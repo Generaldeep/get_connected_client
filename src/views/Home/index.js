@@ -10,15 +10,15 @@ import './home.css'
 class Home extends Component {
   render() {
     return(
-      <Grid>
-        <Grid.Column only='computer' computer={5}>
+      <Grid id='homeview'>
+        <Grid.Column id='articles' only='computer' computer={5}>
           <Header size='medium' textAlign='center'>Articles</Header>
           <Articles/>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={5}>
+        <Grid.Column id='feed' mobile={16} tablet={8} computer={5}>
           <Feed/>
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={8} computer={5}>
+        <Grid.Column id='jobs' mobile={16} tablet={8} computer={5}>
           <Header size='medium' textAlign='center'>Bay Area Jobs</Header>
           <GetJobs/>
         </Grid.Column>

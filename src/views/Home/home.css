@@ -1,53 +1,22 @@
-#home{
-  width: 100%
+#homeview{
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-left: 1%;
 }
 
-.feedandjobs{
-  width: 70%
+#feed {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+#articles {
+  margin-right: 1%;
+  margin-left: 1%;
+  border-right: 1px solid grey;
 }
 
 #jobs {
- width: 20%;
- float: right;
- text-align: center;
- padding-top: 2em;
- padding-left: 40px;
- border-left: 1px solid grey;
- margin: 40px;
- margin-left: 10px;
- margin-right: 10px;
-}
-
-#jobs h4 {
-  border-bottom: 1px solid grey;
-}
-
-
-
-.articles {
- width: 30%;
-}
-/*#articles {
- width: 20%;
- float: right;
- text-align: center;
- position: relative;
- padding-top: 2em;
- margin: 40px;
- margin-left: 10px;
- border-right: 1px solid grey;
- padding-right: 30px;
-}*/
-
-#articles h4 {
-  border-bottom: 1px solid grey;
-}
-
-#feed{
- width: 40%;
- float: right;
- margin-top: 40px;
- margin-left: 60px;
- margin-right: 60px;
- padding-left: 40px;
+  margin-right: 1%;
+  margin-left: 1%;
+  border-left: 1px solid grey;
 }
