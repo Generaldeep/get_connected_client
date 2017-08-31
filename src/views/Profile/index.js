@@ -18,6 +18,7 @@ class Profile extends Component {
   render() {
     return (
       <Grid id="profile" rows={2}>
+
         <Grid.Row>
           <Grid.Column className='profileheader'>
             <ProfileHeader />
@@ -25,32 +26,36 @@ class Profile extends Component {
           </Grid.Row>
 
           <Grid.Row>
-          <Grid.Column>
-            <div className="projectsskills">
-              <div className="skills">
-                <div className="skillslist">
-                  <Header size='medium' textAlign='center'>Technical Skills</Header>
-                  <SkillsList />
-                  <div className="addskills">
-                    <AddSkillsForm />
-                  </div>
-                </div>
-              </div>
+            <Grid.Column>
+              <AddSocial/>
+              <ListOfSocialLinks/>
+            </Grid.Column>
+          </Grid.Row>
 
+          <Grid.Row>
+            <Grid.Column>
+              <Header size='medium' textAlign='center'>Technical Skills</Header>
+              <Grid.Column className='skillslist'>
+                <SkillsList />
+              </Grid.Column>
+              <Grid.Column>
+                <AddSkillsForm />
+              </Grid.Column>
+            </Grid.Column>
+          </Grid.Row>
 
-              <div className="projects">
-                <Header size='medium' textAlign='center'>Technical Projects</Header>
-                <div>
-                  <ProjectsList />
-                  <div className="projectlist">
-                    <AddProjectForm />
-                  </div>
-                </div>
-              </div>
+          <Grid.Row>
+            <Grid.Column>
+              <Header size='medium' textAlign='center'>Technical Projects</Header>
+              <Grid.Column className='projectlist'>
+                <ProjectsList />
+              </Grid.Column>
+              <Grid.Column>
+                <AddProjectForm />
+              </Grid.Column>
+            </Grid.Column>
+          </Grid.Row>
 
-            </div>
-          </Grid.Column>
-        </Grid.Row>
       </Grid>
     );
   }

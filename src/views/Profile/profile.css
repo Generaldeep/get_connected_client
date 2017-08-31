@@ -6,6 +6,7 @@
 
  #profileheader {
   width: 100%;
+  padding-top: 1%;
  }
 
  /*#skills_projects_coverflow {
@@ -24,11 +25,16 @@
  }
 
  .skillslist {
-  margin-bottom: 20px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+
  }
 
  .projectlist {
-  margin-top: 20px;
+   margin-top: 1%;
+   margin-bottom: 1%;
+   margin-right: 1%;
  }
 
  .addskills {
