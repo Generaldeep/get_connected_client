@@ -3,12 +3,7 @@
  }
 
  #profileheader {
-  max-width: 30%;
-  min-width: 30%;
-  margin-top: 95px;
-  margin-left: 60px;
-  margin-right: 100px;
-  padding: 1px;
+  width: 100%;
  }
 
  /*#skills_projects_coverflow {

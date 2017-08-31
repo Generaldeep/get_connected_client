@@ -18,29 +18,10 @@ class Profile extends Component {
   render() {
     return (
       <Grid id="profile" rows={2}>
-        <Grid.Row columns={2}>
-          <Grid.Column>
+        <Grid.Row>
+          <Grid.Column className='profileheader'>
             <ProfileHeader />
-
-            <div className="cohortinfo">
-              {/* <div className="updatecohort">
-                <AddCohort />
-              </div> */}
-              <div className="updatesocial">
-                <div>
-                  <Header size='medium' textAlign='center'>Social Media Links</Header>
-                  <AddSocial />
-                  <ListOfSocialLinks />
-                </div>
-              </div>
-
-              {/* <div className="deletesocial">
-                <h5>No Longer Want To Keep Profile?</h5>
-                <DeleteProfile />
-              </div> */}
-            </div>
-
-          </Grid.Column>
+            </Grid.Column>
           </Grid.Row>
 
           <Grid.Row>
