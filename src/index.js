@@ -25,7 +25,7 @@ ReactDOM.render(
      <div>
       <Route  path='/' component={App} />
        <Route exact path='/Home' component={Auth(Home)}/>
-       <Route exact path='/Profile' component={Auth(Profile)}/>
+       <Route exact path='/Profile/:uid' component={Auth(Profile)}/>
        <Route path="/Login" component={Login} />
        <Route path="/Logout" component={Auth(Logout)} />
      </div>

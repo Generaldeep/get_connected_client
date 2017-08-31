@@ -62,7 +62,7 @@ class Feeds extends Component {
                         <Comment.Avatar src={post.photo} />
                         <Comment.Content>
                           <Comment.Author>
-                            <Link to='/Profile'>{post.name}</Link>
+                            <Link to={`/Profile/${post.uid}`}>{post.name}</Link>
                             <Comment.Metadata>
                              {post.date}
                             </Comment.Metadata>

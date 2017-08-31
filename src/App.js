@@ -44,7 +44,7 @@ class App extends Component {
             <Link to='/Home'>
               <Menu.Item name='Home' to="/Home" active={activeItem === 'Home'} onClick={this.handleItemClick} />
             </Link>
-            <Link to='/Profile'>
+            <Link to={`/Profile/${uid}`}>
               <Menu.Item name='Profile' to="/Profile" active={activeItem === 'Profile'} onClick={this.handleItemClick} />
             </Link>
 
