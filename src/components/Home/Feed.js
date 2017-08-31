@@ -32,7 +32,7 @@ class Feeds extends Component {
                           <Comment.Avatar src={comment.photo} />
                           <Comment.Content>
                             <Comment.Author>
-                              {comment.name}
+                              <Link to='/Profile'>{comment.name}</Link>
                               <Comment.Metadata>
                                {comment.time}
                               </Comment.Metadata>
@@ -54,7 +54,7 @@ class Feeds extends Component {
 
     render() {
         const { userData } = this.props;
-        const posts = this.props.posts.map((post, ind) => {
+        const Posts = this.props.posts.map((post, ind) => {
             return (
                 <div key={ind} className='origPost'>
                     <Comment.Group>
@@ -62,7 +62,7 @@ class Feeds extends Component {
                         <Comment.Avatar src={post.photo} />
                         <Comment.Content>
                           <Comment.Author>
-                            {post.name}
+                            <Link to='/Profile'>{post.name}</Link>
                             <Comment.Metadata>
                              {post.date}
                             </Comment.Metadata>
@@ -85,7 +85,7 @@ class Feeds extends Component {
         return (
             <div>
               <PostForm/>
-                {posts}
+                {Posts}
             </div>
         )
     }
