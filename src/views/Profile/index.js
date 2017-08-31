@@ -38,7 +38,7 @@ class Profile extends Component {
               <Grid.Column className='skillslist'>
                 <SkillsList />
               </Grid.Column>
-              <Grid.Column>
+              <Grid.Column className='skillslist'>
                 <AddSkillsForm />
               </Grid.Column>
             </Grid.Column>

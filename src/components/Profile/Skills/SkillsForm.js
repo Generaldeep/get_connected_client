@@ -35,34 +35,33 @@ class AddSkillsForm extends Component {
         <Modal trigger={<Button onClick={this.handleOpen} color='blue' >Add Skill</Button>} open={this.state.modalOpen}>
           <Modal.Content>
             <Header>
-              <h3>Enter A Skill</h3>
+              Enter A Skill
             </Header>
             <Form className="links ui form">
               <Modal.Content>
-                <TextArea className="skillName" name="skill" type="text" placeholder="Enter a skill ex JavaScript,   React, Node, Express" onChange={this.updateInput} autoHeight/>
-              </Modal.Content>
+                <input className="skillName" name="skill" type="text" placeholder="Enter a skill ex JavaScript,   React, Node, Express" onChange={this.updateInput} autoHeight/>
+                <br/>
+                <br/>
 
-             <div className='submit'>
-               <Button
-                  type="submit" color='blue'
-                  onClick={(e) => {
-                  e.preventDefault();
-                  addSkill(userData, this.state.skill);
+                <Button
+                   type="submit" color='blue'
+                   onClick={(e) => {
+                   e.preventDefault();
+                   addSkill(userData, this.state.skill);
+                   this.handleClose();
+                    }}
+                    >
+                  Submit
+                </Button>
+
+
+                <Button type="cancel" color='red' onClick={(e) =>{
+                  e.preventDefault()
                   this.handleClose();
-                   }}
-                   >
-                 Submit
-               </Button>
-              </div>
-
-              <div className="cancel">
-               <Button type="cancel" color='red' onClick={(e) =>{
-                 e.preventDefault()
-                 this.handleClose();
-                 }}>
-                 Cancel
-               </Button>
-             </div>
+                  }}>
+                  Cancel
+                </Button>
+              </Modal.Content>
 
             </Form>
           </Modal.Content>
