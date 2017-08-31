@@ -17,7 +17,7 @@ import './profile.css';
 class Profile extends Component {
   render() {
     return (
-      <Grid id="profile" rows={2}>
+      <Grid id="profile">
 
         <Grid.Row>
           <Grid.Column className='profileheader'>
@@ -38,7 +38,7 @@ class Profile extends Component {
               <Grid.Column className='skillslist'>
                 <SkillsList />
               </Grid.Column>
-              <Grid.Column className='skillslist'>
+              <Grid.Column>
                 <AddSkillsForm />
               </Grid.Column>
             </Grid.Column>

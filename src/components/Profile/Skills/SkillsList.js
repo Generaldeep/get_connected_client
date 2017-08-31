@@ -46,23 +46,23 @@ class SkillsList extends Component {
     return(
         <StyleRoot>
          <Coverflow
-             displayQuantityOfSide={1}
-             navigation={true}
-             enableScroll
-             enableHeading={false}
-             clickable={false}
-             active={1}
-             media={{
-               '@media (max-width: 2000px)': {
-                 width: '2000px',
-                 height: '300px',
-               },
-               '@media (min-width: 800px)': {
-                 width: '1000px',
-                 height: '300px',
+           displayQuantityOfSide={1}
+           navigation
+           enableScroll
+           enableHeading={false}
+           clickable={false}
+           active={1}
+           media={{
+             '@media (max-width: 800px)': {
+               width: '600px',
+               height: '300px',
+             },
+             '@media (min-width: 800px)': {
+               width: '1000px',
+               height: '300px',
                },
              }}
-             >
+           >
           {this.renderSkills(skills, userData)}
          </Coverflow>
         </StyleRoot>
