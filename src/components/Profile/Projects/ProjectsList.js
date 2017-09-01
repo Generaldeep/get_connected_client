@@ -16,9 +16,16 @@ class ProjectsList extends Component {
     super(props);
   }
   componentDidMount() {
-    firebase.database().ref(`projects/${this.props.userData.uid}`).on('value', snapshot => {
-     return this.props.fetchProjects(snapshot.val())
-   })
+    if(this.props.userUid.length > 0) {
+      firebase.database().ref(`projects/${this.props.uid}`).on('value', snapshot => {
+       return this.props.fetchProjects(snapshot.val())
+     })
+    }
+    else {
+      firebase.database().ref(`projects/${this.props.userData.uid}`).on('value', snapshot => {
+       return this.props.fetchProjects(snapshot.val())
+       })
+     }
   }
 
   renderProject = (userData, projects) => {
@@ -44,20 +51,20 @@ class ProjectsList extends Component {
     return(
         <StyleRoot>
          <Coverflow
-               displayQuantityOfSide={1}
-               navigation
-               enableScroll
-               enableHeading={false}
-               clickable={false}
-               active={1}
-               media={{
-                 '@media (max-width: 800px)': {
-                   width: '600px',
-                   height: '300px',
-                 },
-                 '@media (min-width: 800px)': {
-                   width: '1000px',
-                   height: '300px',
+             displayQuantityOfSide={1}
+             navigation
+             enableScroll
+             enableHeading={false}
+             clickable={false}
+             active={1}
+             media={{
+               '@media (max-width: 800px)': {
+                 width: '600px',
+                 height: '300px',
+               },
+               '@media (min-width: 800px)': {
+                 width: '1000px',
+                 height: '300px',
                  },
                }}
              >
@@ -68,4 +75,4 @@ class ProjectsList extends Component {
   }
 }
 
-export default connect(({ userData, projects }) => ({ userData, projects }), ({ fetchProjects }))(ProjectsList);
+export default connect(({ userData, projects, userUid }) => ({ userData, projects, userUid }), ({ fetchProjects }))(ProjectsList);

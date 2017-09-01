@@ -17,9 +17,16 @@ class SkillsList extends Component {
   }
 
   componentDidMount() {
-   firebase.database().ref(`skills/${this.props.userData.uid}`).on('value', snapshot => {
-    return this.props.fetchSkills(snapshot.val());
-   })
+    if(this.props.userUid.length > 0) {
+      firebase.database().ref(`skills/${this.props.uid}`).on('value', snapshot => {
+       return this.props.fetchSkills(snapshot.val())
+     })
+    }
+    else {
+      firebase.database().ref(`skills/${this.props.userData.uid}`).on('value', snapshot => {
+       return this.props.fetchSkills(snapshot.val())
+       })
+     }
   }
 
   renderSkills = (skills, userData) => {
@@ -70,4 +77,4 @@ class SkillsList extends Component {
   }
 }
 
-export default connect(({ userData, skills }) => ({ userData, skills }), ({ fetchSkills }))(SkillsList);
+export default connect(({ userData, skills, userUid }) => ({ userData, skills, userUid }), ({ fetchSkills }))(SkillsList);
