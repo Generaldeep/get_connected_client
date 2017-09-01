@@ -13,7 +13,14 @@ class ListOfSocialLinks extends Component {
   }
 
   componentDidMount() {
-    firebase.database().ref(`users/${this.props.userData.uid}/social`).on('value', snapshot => this.props.fetchSocial(snapshot.val()));
+    if(this.props.userUid.length > 0) {
+      firebase.database().ref(`users/${this.props.uid}/social`).on('value', snapshot => this.props.fetchSocial(snapshot.val()));
+    }
+    else {
+      firebase.database().ref(`users/${this.props.userData.uid}`).on('value', snapshot => {
+       return this.props.fetchSocial(snapshot.val())
+       })
+     }
   }
 
   renderSocial = (social, userData) => {
@@ -73,4 +80,4 @@ class ListOfSocialLinks extends Component {
    }
 }
 
-export default connect(({ userData, social }) => ({ userData, social }), { fetchSocial })(ListOfSocialLinks);
+export default connect(({ userData, social, userUid }) => ({ userData, social, userUid }), { fetchSocial })(ListOfSocialLinks);
