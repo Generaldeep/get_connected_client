@@ -7,6 +7,8 @@ import articles from './article_reducer';
 import projects from './projects_reducer';
 import social from './social_reducer';
 import skills from './skills_reducer';
+import userUid from './uid_reducer';
+
 
 
 const appReducer = combineReducers({
@@ -18,7 +20,7 @@ const appReducer = combineReducers({
   projects,
   social,
   skills,
-
+  userUid,
 })
 
 const rootReducer = (state, action) => {
