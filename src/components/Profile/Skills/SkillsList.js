@@ -17,7 +17,7 @@ class SkillsList extends Component {
   }
 
   componentDidMount() {
-    if(this.props.userUid.length > 0) {
+    if(this.props.userUid && this.props.userUid.length > 0) {
       firebase.database().ref(`skills/${this.props.userUid}`).on('value', snapshot => {
        return this.props.fetchSkills(snapshot.val())
      })

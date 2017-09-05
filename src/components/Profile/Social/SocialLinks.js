@@ -13,7 +13,7 @@ class ListOfSocialLinks extends Component {
   }
 
   componentDidMount() {
-    if(this.props.length && this.props.userUid.length > 0) {
+    if(this.props.userUid && this.props.userUid.length > 0) {
       firebase.database().ref(`users/${this.props.userUid}/social`).on('value', snapshot => this.props.fetchSocial(snapshot.val()));
     }
     else {

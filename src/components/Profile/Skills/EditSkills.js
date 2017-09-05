@@ -75,6 +75,7 @@ class EditSkills extends Component {
         </div>
       );
     }
+    else {return <div />;}
   }
 
 
