@@ -18,7 +18,7 @@ import './profile.css';
 class Profile extends Component {
   componentWillMount() {
     if(!this.props.userUid.userUid) {
-      this.props.changeUserUidState(this.props.userData.uid)
+      this.props.changeUserUidState(this.props.userData.uid, this.props.userData.photo, this.props.userData.name)
     }
   }
 
