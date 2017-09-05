@@ -19,7 +19,7 @@ class Home extends Component {
           <Feed/>
         </Grid.Column>
         <Grid.Column id='jobs' mobile={16} tablet={7} computer={5}>
-          <Header size='small' textAlign='center'>Bay Area Jobs</Header>
+          <Header size='small' textAlign='center'>Bay Area Tech Jobs</Header>
           <GetJobs/>
         </Grid.Column>
       </Grid>
