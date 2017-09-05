@@ -37,7 +37,7 @@ class AddProjectForm extends Component {
                   <Header>Project Name </Header>
                     <input className="proName" placeholder="Enter project name" name="projectName" onChange={this.updateInput} type="text" autoHeight/>
                       <Header>Project Description</Header>
-                    <input className="proDesc" name="description" placeholder="Enter brief description about your project" onChange={this.updateInput} type="text" autoHeight/>
+                    <input className="proDesc" name="description" placeholder="Enter brief description about your project" onChange={this.updateInput} type="text" />
                     <br/>
                     <br/>
 

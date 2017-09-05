@@ -31,7 +31,7 @@ class Comments extends Component {
      const { userData, addComment, postKey, postIndex } = this.props;
         return (
           <div>
-            <Icon  type="submit" color='blue' link='true' onClick={this.handleOpen}>Reply</Icon>
+            <Icon  type="submit" color='blue' link={true} onClick={this.handleOpen}>Reply</Icon>
             <Modal open={this.state.modalOpen}>
               <Modal.Content>
                  <Form className="links ui form">

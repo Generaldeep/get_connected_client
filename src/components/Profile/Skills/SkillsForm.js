@@ -40,7 +40,7 @@ class AddSkillsForm extends Component {
             </Header>
             <Form className="links ui form">
               <Modal.Content>
-                <input className="skillName" name="skill" type="text" placeholder="Enter a skill ex JavaScript,   React, Node, Express" onChange={this.updateInput} autoHeight/>
+                <input className="skillName" name="skill" type="text" placeholder="Enter a skill ex JavaScript,   React, Node, Express" onChange={this.updateInput} />
                 <br/>
                 <br/>
 

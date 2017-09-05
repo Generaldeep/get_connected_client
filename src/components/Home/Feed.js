@@ -35,7 +35,9 @@ class Feeds extends Component {
                     <Comment.Avatar src={comment.photo} />
                     <Comment.Content>
                       <Comment.Author>
-                        <Link to='/Profile'>{comment.name}</Link>
+                        <Link to={`/Profile/${comment.uid}`}
+                          onClick={(e) => this.handleItemClick(comment.uid, comment.photo, comment.name)}
+                        >{comment.name}</Link>
                         <Comment.Metadata>
                          {comment.time}
                         </Comment.Metadata>

@@ -27,10 +27,10 @@ class ListOfSocialLinks extends Component {
    if (social) {
      return social.map((social, i) => {
       return (
-        <div >
+        <div key={i}>
          <div className="github">
         <Popup
-          trigger={<Button href={social.gitHub} icon="github square" size="large" />}
+          trigger={<Button  icon="github square" size="large" />}
           flowing
           hoverable
         >
@@ -43,13 +43,13 @@ class ListOfSocialLinks extends Component {
        </div>
        <div className="linkedin">
         <Popup
-          trigger={<Button href={social.linkedin} icon="linkedin square" size="large" />}
+          trigger={<Button icon="linkedin square" size="large" />}
           flowing
           hoverable
         >
           <Grid centered divided rows={3}>
             <Grid.Column textAlign='center'>
-              <Header as='h6' icon="github square" size="large" href={social.linkedin}>{social.linkedin}</Header>
+              <Header as='h6' size="large" href={social.linkedin}>{social.linkedin}</Header>
             </Grid.Column>
           </Grid>
         </Popup>
@@ -57,7 +57,7 @@ class ListOfSocialLinks extends Component {
 
        <div className="twitter">
         <Popup
-          trigger={<Button href={social.twitter} icon="twitter" size="large" />}
+          trigger={<Button icon="twitter" size="large" />}
           flowing
           hoverable
         >
