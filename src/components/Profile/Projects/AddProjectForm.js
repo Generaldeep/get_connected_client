@@ -26,7 +26,8 @@ class AddProjectForm extends Component {
         this.setState({[name]: value})
     }
     render() {
-      const {userData, addProject } = this.props;
+      const {userData, addProject, userUid } = this.props;
+      if(userUid === userData.uid) {
         return(
          <div>
           <Modal trigger={<Button color='blue' onClick={this.handleOpen} >Add A Project </Button>}          open={this.state.modalOpen}>
@@ -67,8 +68,12 @@ class AddProjectForm extends Component {
       </Modal>
      </div>
       )
+    }
+    else {
+      return <div/>
+    }
   }
 }
 
 
-export default connect(({ userData }) => ({ userData }), {addProject})(AddProjectForm);
+export default connect(({ userData, userUid }) => ({ userData, userUid }), {addProject})(AddProjectForm);

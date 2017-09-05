@@ -29,7 +29,8 @@ class AddSkillsForm extends Component {
   }
 
   render() {
-   const { userData, addSkill } = this.props;
+   const { userData, addSkill, userUid } = this.props;
+    if(userData.uid === userUid) {
       return (
        <div className='skillsmodal'>
         <Modal trigger={<Button onClick={this.handleOpen} color='blue' >Add Skill</Button>} open={this.state.modalOpen}>
@@ -69,6 +70,10 @@ class AddSkillsForm extends Component {
        </div>
       )
     }
+    else {
+      return <div/>;
+    }
+    }
   }
 
-export default connect(({ userData, skills }) => ({ userData, skills }), { addSkill })(AddSkillsForm);
+export default connect(({ userData, skills, userUid }) => ({ userData, skills, userUid }), { addSkill })(AddSkillsForm);
