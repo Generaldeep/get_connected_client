@@ -22,7 +22,7 @@ class Feeds extends Component {
     })
   }
 
-  handleItemClick = (uid) => {this.props.changeUserUidState(uid)}
+  handleItemClick = (uid, photo, name) => {this.props.changeUserUidState(uid, photo, name)}
 
   renderComments = (commentObject, userData) => {
     if (commentObject) {
@@ -66,7 +66,7 @@ class Feeds extends Component {
                 <Comment.Content>
                   <Comment.Author>
                     <Link to={`/Profile/${post.uid}`}
-                      onClick={(e) => this.handleItemClick(post.uid)}
+                      onClick={(e) => this.handleItemClick(post.uid, post.photo, post.name)}
                     >{post.name}</Link>
                     <Comment.Metadata>
                      {post.date}

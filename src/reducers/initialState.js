@@ -7,5 +7,5 @@ export default {
   projects: [],
   skills: [],
   social: [],
-  userUid: '',
+  userUid: {},
 }

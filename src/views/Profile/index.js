@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Grid, Header } from 'semantic-ui-react';
-import { clearUserUid } from '../../actions';
+import { clearUserUid, changeUserUidState } from '../../actions';
 import ProfileHeader from '../../components/Profile/Header/Header';
 import ProjectsList from '../../components/Profile/Projects/ProjectsList';
 import SkillsList from '../../components/Profile/Skills/SkillsList';
@@ -16,6 +16,12 @@ import '../../components/Profile/profile.css';
 import './profile.css';
 
 class Profile extends Component {
+  componentWillMount() {
+    if(!this.props.userUid.userUid) {
+      this.props.changeUserUidState(this.props.userData.uid)
+    }
+  }
+
   componentWillUnmount() {
     this.props.clearUserUid()
   }
@@ -65,4 +71,4 @@ class Profile extends Component {
   }
 }
 
-export default connect(({ userData, userUid }) => ({ userData, userUid }), ({  clearUserUid}))(Profile);
+export default connect(({ userData, userUid }) => ({ userData, userUid }), ({changeUserUidState, clearUserUid}))(Profile);

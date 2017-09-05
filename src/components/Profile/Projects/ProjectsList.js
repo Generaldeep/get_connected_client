@@ -16,8 +16,8 @@ class ProjectsList extends Component {
     super(props);
   }
   componentDidMount() {
-    if(this.props.userUid && this.props.userUid.length > 0) {
-      firebase.database().ref(`projects/${this.props.userUid}`).on('value', snapshot => {
+    if(this.props.userUid.userUid && this.props.userUid.userUid.length > 0) {
+      firebase.database().ref(`projects/${this.props.userUid.userUid}`).on('value', snapshot => {
        return this.props.fetchProjects(snapshot.val())
      })
     }

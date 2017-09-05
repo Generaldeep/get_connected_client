@@ -30,7 +30,7 @@ class AddSkillsForm extends Component {
 
   render() {
    const { userData, addSkill, userUid } = this.props;
-    if(userData.uid === userUid) {
+    if(userData.uid === userUid.userUid) {
       return (
        <div className='skillsmodal'>
         <Modal trigger={<Button onClick={this.handleOpen} color='blue' >Add Skill</Button>} open={this.state.modalOpen}>

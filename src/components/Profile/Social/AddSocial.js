@@ -31,7 +31,7 @@ import { Popup, Button, Header, Image, Modal, Form, TextArea } from 'semantic-ui
 
   render() {
     const { userData, social, userUid } = this.props;
-    if(userData.uid === userUid) {
+    if(userData.uid === userUid.userUid) {
       return (
         <div className='updatesocial'>
           <Button color='blue' onClick={this.handleOpen}>Update Social Links</Button>

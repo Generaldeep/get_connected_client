@@ -27,7 +27,7 @@ class AddProjectForm extends Component {
     }
     render() {
       const {userData, addProject, userUid } = this.props;
-      if(userUid === userData.uid) {
+      if(userUid.userUid === userData.uid) {
         return(
          <div>
           <Modal trigger={<Button color='blue' onClick={this.handleOpen} >Add A Project </Button>}          open={this.state.modalOpen}>
