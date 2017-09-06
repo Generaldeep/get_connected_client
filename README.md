@@ -1,4 +1,4 @@
-# Galvanize Connect
+# Get_Connected
 
 
 ## Table of Contents
