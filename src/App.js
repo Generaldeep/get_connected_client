@@ -6,6 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { Menu, Segment, Dropdown } from 'semantic-ui-react'
 import Home from './views/Home/index';
 import Profile from './views/Profile/index';
+import About from './views/About/index';
 import Login from './components/GoogleAuth/GoogleAuth';
 import { connect } from 'react-redux';
 import './App.css';
@@ -46,6 +47,9 @@ class App extends Component {
             </Link>
             <Link to={`/Profile/${uid}`}>
               <Menu.Item name='Profile' to="/Profile" active={activeItem === 'Profile'} onClick={this.handleItemClick} />
+            </Link>
+            <Link to={'/About'}>
+              <Menu.Item name='About' to="/About" active={activeItem === 'About'} onClick={this.handleItemClick} />
             </Link>
 
 

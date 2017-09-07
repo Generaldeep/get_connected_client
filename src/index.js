@@ -12,6 +12,7 @@ import Login from './components/GoogleAuth/GoogleAuth';
 import Logout from './components/GoogleAuth/Logout';
 import Home from './views/Home/index';
 import Profile from './views/Profile/index';
+import About from './views/About/index';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route  path='/' component={App} />
        <Route exact path='/Home' component={Auth(Home)}/>
        <Route exact path='/Profile/:uid' component={Auth(Profile)}/>
+       <Route exact path='/About' component={Auth(About)}/>
        <Route path="/Login" component={Login} />
        <Route path="/Logout" component={Auth(Logout)} />
      </div>
