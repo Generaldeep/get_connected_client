@@ -48,6 +48,6 @@
 ```
 
 ## How To contribute
- In order to contribute to this project you need permission to edit our Firebase database. Open an issue, leave your gmail along with the issue you'd like to resolve and our team will add you as a collaborator.  
+ In order to contribute to this project you need permission from me in order to edit either the client or the server. Open an issue, leave your gmail along with the issue you'd like to resolve and I'll add you as a collaborator.  
 
  Once added, clone this repository and run ```npm install``` in order to install project related dependencies. Make a pull request and once the pull request is approved we'll merge your contribution.
